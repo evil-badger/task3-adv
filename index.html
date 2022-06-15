@@ -11,7 +11,7 @@
     <div class="article">
         <p class="universe starColor">Новый день - новые задания. Сегодня будет посложнее, но рано или поздно решение будет найдено</p>
         <div class="grid">
-            <button class="myButton" onclick="empty()">Текстовое поздравление</button>
+            <button class="myButton" onclick="congratulation()">Текстовое поздравление</button>
             <button class="myButton" onclick="empty()">Строка #######</button>
             <button class="myButton" onclick="empty()">Cумма нечетных чисел</button>
             <button class="myButton" onclick="empty()">Бесконечный цикл</button>
@@ -21,6 +21,14 @@
     </div>
 
     <script>
+        function congratulation(){
+            let name=prompt("Введите ваше имя");
+            for(let i=1;i<5;i++)
+                if(i!=3)
+                    { console.log('Happy birthday to you'); }
+                    else { console.log(`Happy birthday, dear ${name}`); }
+        }
+
     </script>
 </body>
 </html>
