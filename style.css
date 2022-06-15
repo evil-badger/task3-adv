@@ -1,0 +1,59 @@
+
+
+body{
+    background-color: #c9dbed;
+}
+
+
+.article{
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap:10px;
+}
+
+.starColor{
+    color: #004282;
+}
+
+.unvisible{
+    font-size: 18px;
+}
+
+.itUnworks{
+    font-size: 18px;
+}
+
+.backend{
+    font-size: 22px;
+}
+
+.newHorizons{
+    font-size: 22px;
+}
+
+.universe{
+    font-size: 24px;
+}
+
+.myButton{
+    margin-bottom: 30px;
+    background-color: #c9dbed;
+    color: #004282;
+    max-width: 400px;
+    height: 50px;
+    border-radius: 15px;
+    border-color: #004282;
+    font-size: 18px;
+}
+
+.myButton:hover{
+    background-color: yellow;
+}
