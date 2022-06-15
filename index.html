@@ -13,10 +13,10 @@
         <div class="grid">
             <button class="myButton" onclick="congratulation()">Текстовое поздравление</button>
             <button class="myButton" onclick="string()">Строка #######</button>
-            <button class="myButton" onclick="empty()">Cумма нечетных чисел</button>
-            <button class="myButton" onclick="empty()">Бесконечный цикл</button>
-            <button class="myButton" onclick="empty()">Вывод чисел по критерию</button>
-            <button class="myButton" onclick="empty()">Вывод дата, время, часовой пояс</button>
+            <button class="myButton" onclick="oddNumberSumm()">Cумма нечетных чисел</button>
+            <button class="myButton" onclick="infinity()">Бесконечный цикл</button>
+            <button class="myButton" onclick="divideOn()">Вывод чисел по критерию</button>
+            <button class="myButton" onclick="time()">Вывод дата, время, часовой пояс</button>
         </div>
     </div>
 
@@ -41,6 +41,57 @@
                 string+=".#";
             }
             console.log(string);
+        }
+
+        function oddNumberSumm(){
+            let count=prompt("Введите число");
+            let sum=0;
+            if(count=="") {
+                alert("Invalid. You should enter a number");
+            } else {
+                for(let i=0; i<=count;i++) {
+                    if(i%2==1) {
+                            sum+=i;
+                    }
+                }
+            }
+            console.log(sum);
+        }
+
+        function infinity(){
+            for(let i=0;;i++) {
+                let number=Math.random();
+                if(number>0.7) {
+                    console.log(`Loop was finished because of: ${number}`);
+                    console.log(`Number of iterations: ${i}`);
+                    break;
+                }
+            }
+        }
+
+        function divideOn(){
+            for(let i=1; i<=50; i++){
+                if(i%3==0&&i%5==0) {
+                    console.log("Div by 5 and 3");
+                }
+                else if(i%3==0) {
+                    console.log("Div by 3");
+                }
+                else if(i%5==0) {
+                    console.log("Div by 5");
+                } 
+                else {
+                    console.log(i);
+                }
+            }    
+        }
+
+        function time(){
+            let today = new Date();
+            let currentTimeZoneOffsetInHours = today.getTimezoneOffset() / 60;
+            let date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`;
+            let time = `${today.getHours()}-${today.getMinutes()}-${today.getSeconds()}`;
+            console.log(`${date} ${time} UTC +${-currentTimeZoneOffsetInHours}`);
         }
 
     </script>
