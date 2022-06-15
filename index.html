@@ -12,7 +12,7 @@
         <p class="universe starColor">Новый день - новые задания. Сегодня будет посложнее, но рано или поздно решение будет найдено</p>
         <div class="grid">
             <button class="myButton" onclick="congratulation()">Текстовое поздравление</button>
-            <button class="myButton" onclick="empty()">Строка #######</button>
+            <button class="myButton" onclick="string()">Строка #######</button>
             <button class="myButton" onclick="empty()">Cумма нечетных чисел</button>
             <button class="myButton" onclick="empty()">Бесконечный цикл</button>
             <button class="myButton" onclick="empty()">Вывод чисел по критерию</button>
@@ -23,10 +23,24 @@
     <script>
         function congratulation(){
             let name=prompt("Введите ваше имя");
-            for(let i=1;i<5;i++)
-                if(i!=3)
-                    { console.log('Happy birthday to you'); }
-                    else { console.log(`Happy birthday, dear ${name}`); }
+            let string="";
+            for(let i=1;i<5;i++){
+                if(i!=3) { 
+                    string+='Happy birthday to you\n'; 
+                } else { 
+                    string+=`Happy birthday, dear ${name}\n`; 
+                }
+            }
+            console.log(string);
+        }
+        
+        function string(){
+            let count=prompt("Введите количество итераций");
+            let string="";
+            for(let i=0; i<count;i++){
+                string+=".#";
+            }
+            console.log(string);
         }
 
     </script>
