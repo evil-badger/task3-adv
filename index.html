@@ -44,15 +44,15 @@
         }
 
         function oddNumberSumm(){
-            let count=prompt("Введите число");
+            let count=parseInt(prompt("Введите число"));
+
+            while(isNaN(count)){
+                count=parseInt(prompt("Invalid. You should enter a number")); 
+            }
             let sum=0;
-            if(count=="") {
-                alert("Invalid. You should enter a number");
-            } else {
-                for(let i=0; i<=count;i++) {
-                    if(i%2==1) {
-                            sum+=i;
-                    }
+            for(let i=0; i<=count;i++) {
+                if(i%2==1) {
+                    sum+=i;
                 }
             }
             console.log(sum);
